@@ -1,0 +1,146 @@
+:root {
+    --page-spacing: 2rem;
+    --font-scale: 1;
+    --page-zoom: 1;
+    color-scheme: light;
+    font-family: Arial, sans-serif;
+    font-size: 12pt;
+    line-height: 1.6;
+    color: #0b0c0c;
+    background: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    zoom: var(--page-zoom);
+    max-width: 1100px;
+    margin: var(--page-spacing) auto;
+    padding: var(--page-spacing);
+    font-size: calc(12pt * var(--font-scale));
+}
+
+a {
+    color: #00625E;
+}
+
+a:focus,
+a:hover {
+    color: #00625E;
+    text-decoration-thickness: 3px;
+}
+
+.report-header {
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid #b1b4b6;
+}
+
+.organisation-logo {
+    display: block;
+    width: 160px;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.report-title {
+    margin: 0.5rem 0 0;
+    color: #00625E;
+    font-family: Arial, sans-serif;
+    font-size: calc(34pt * var(--font-scale));
+    font-weight: 700;
+}
+
+.report-subtitle {
+    margin: 0.5rem 0 0;
+    color: #535453;
+    font-family: Arial, sans-serif;
+    font-size: calc(34pt * var(--font-scale));
+    font-weight: 400;
+}
+
+.report-content h2 {
+    margin-top: 2rem;
+    color: #00625E;
+    font-family: Arial, sans-serif;
+    font-size: calc(24pt * var(--font-scale));
+    font-weight: 700;
+}
+
+.report-content h3 {
+    margin-top: 1.5rem;
+    color: #00625E;
+    font-family: Arial, sans-serif;
+    font-size: calc(12pt * var(--font-scale));
+    font-weight: 700;
+}
+
+.table-of-contents {
+    margin: 2rem 0;
+    padding: 1rem 1.5rem;
+    border: 1px solid #b1b4b6;
+    background: #f3f2f1;
+}
+
+.table-of-contents h2 {
+    margin-top: 0;
+    color: #00625E;
+    font-family: Arial, sans-serif;
+    font-size: calc(12pt * var(--font-scale));
+    font-weight: 700;
+}
+
+.table-of-contents ol {
+    margin-bottom: 0;
+    padding-left: 1.5rem;
+    list-style: none;
+}
+
+.table-of-contents .contents-level-2 {
+    margin-left: 1.5rem;
+}
+
+.table-container {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+.report-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.report-table th,
+.report-table td {
+    padding: 0.65rem;
+    border: 1px solid #b1b4b6;
+    text-align: left;
+    vertical-align: top;
+}
+
+.report-table th {
+    background: #f3f2f1;
+}
+
+figure {
+    margin: 2rem 0;
+}
+
+figure img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+figcaption {
+    margin-top: 0.5rem;
+    color: #505a5f;
+}
+
+@media (max-width: 600px) {
+    :root {
+        --page-spacing: 1.5rem;
+    }
+}

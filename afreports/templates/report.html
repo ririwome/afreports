@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <style>{{ stylesheet }}</style>
+</head>
+<body>
+    <header class="report-header">
+        <img
+            class="organisation-logo"
+            src="{{ logo_data_uri }}"
+            alt="Planning Inspectorate"
+        >
+        <h1 class="report-title">{{ title }}</h1>
+        {% if subtitle %}
+            <p class="report-subtitle">{{ subtitle }}</p>
+        {% endif %}
+    </header>
+    <main class="report-content">
+        {% for block in rendered_blocks %}
+            {{ block }}
+        {% endfor %}
+    </main>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<nav class="table-of-contents" aria-labelledby="table-of-contents-heading">
+    <h2 id="table-of-contents-heading">Contents</h2>
+    {% if entries %}
+        <ol>
+            {% for entry in entries %}
+                <li class="contents-level-{{ entry.level }}">
+                    <a href="#{{ entry.anchor }}">
+                        <span class="contents-number">{{ entry.number }}</span>
+                        {{ entry.text }}
+                    </a>
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No sections in this report.</p>
+    {% endif %}
+</nav>

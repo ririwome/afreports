@@ -1,0 +1,14 @@
+<nav class="table-of-contents" aria-labelledby="{{ anchor }}">
+    <h2 id="{{ anchor }}">Appendix</h2>
+    {% if appendix_entries %}
+        <ol>
+            {% for entry in appendix_entries %}
+                <li>
+                    <a href="#{{ entry.anchor }}">{{ entry.label }} {{ entry.caption }}</a>
+                </li>
+            {% endfor %}
+        </ol>
+    {% else %}
+        <p>No captioned tables or figures in this report.</p>
+    {% endif %}
+</nav>
